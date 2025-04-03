@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Send, Facebook, Instagram, Linkedin, Github } from "lucide-react";
@@ -75,7 +74,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Location</h4>
-                    <p className="text-muted-foreground">Pokhara 8, Gandaki, Nepal</p>
+                    <p className="text-muted-foreground">Prithivichowk, Pokhara, Nepal</p>
                   </div>
                 </div>
                 
@@ -220,7 +219,6 @@ const Contact = () => {
         </div>
       </section>
       
-      {/* Map Section - Updated with the new Google Maps URL */}
       <div className="h-80 bg-muted dark:bg-gray-900/50 w-full">
         <iframe
           src="https://www.google.pl/maps/place/6X6P%2BPJJ,+%E0%A4%AA%E0%A5%8B%E0%A4%96%E0%A4%B0%E0%A4%BE+33700/@28.2117638,83.9866506,20.01z/data=!4m6!3m5!1s0x399595b2f387fb51:0x8dbe257bd0694a1f!8m2!3d28.2118514!4d83.9865579!16s%2Fg%2F11jbhy179x?entry=ttu&g_ep=EgoyMDI1MDMzMS4wIKXMDSoASAFQAw%3D%3D"
@@ -230,7 +228,7 @@ const Contact = () => {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Pokhara Map"
+          title="Prithivichowk, Pokhara Map"
         ></iframe>
       </div>
     </PageLayout>

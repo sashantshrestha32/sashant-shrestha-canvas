@@ -92,7 +92,7 @@ const Footer = () => {
             <h3 className="font-heading font-medium text-lg mb-4">Contact Info</h3>
             <div className="space-y-2 text-muted-foreground">
               <p>
-                <span className="font-semibold">Location:</span> Pokhara 8, Gandaki, Nepal
+                <span className="font-semibold">Location:</span> Prithivichowk, Pokhara, Nepal
               </p>
               <p>
                 <span className="font-semibold">Phone:</span> +977 9762567644

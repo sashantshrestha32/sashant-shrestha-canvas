@@ -53,7 +53,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <Link to="/" className="font-heading text-2xl font-bold text-primary">
-          Sashant<span className="text-secondary">.Dev</span>
+          Sashant<span className="text-secondary"> Shrestha</span>
         </Link>
 
         {/* Desktop Navigation */}

@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Briefcase, ArrowRight } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
@@ -129,68 +128,30 @@ const Experience = () => {
   );
 };
 
-// Mock experience data (replace with actual data)
+// Updated experience data with only BG Tech
 const experiences = [
   {
-    period: "January 2021 - Present",
-    role: "Senior Digital Marketing Specialist",
-    company: "TechNepal Solutions, Pokhara",
-    description: "Leading comprehensive digital marketing strategies for a diverse client portfolio across multiple industries including tourism, e-commerce, and local businesses.",
+    period: "January 2024 - Present",
+    role: "SEO Expert & Digital Marketer",
+    company: "BG Tech, Pokhara",
+    description: "Leading comprehensive digital marketing strategies and SEO optimization for a diverse client portfolio across multiple industries.",
     responsibilities: [
       "Develop and implement SEO strategies to improve client website rankings",
       "Create and manage content marketing campaigns across multiple platforms",
       "Analyze website performance using Google Analytics and other tools",
       "Manage PPC campaigns across Google, Facebook, and Instagram",
-      "Train and mentor junior team members on digital marketing best practices"
+      "Conduct comprehensive SEO audits for client websites"
     ],
     achievements: [
-      "Increased organic traffic by 70% for a local tourism client within 6 months",
+      "Increased organic traffic by 70% for key clients within 6 months",
       "Reduced PPC costs by 30% while maintaining conversion rates",
       "Streamlined content creation process improving delivery time by 40%"
     ],
     skills: ["SEO", "Content Marketing", "Google Analytics", "PPC", "Social Media Marketing", "Email Marketing"]
-  },
-  {
-    period: "March 2019 - December 2020",
-    role: "SEO Analyst",
-    company: "WebGrowth Nepal, Kathmandu",
-    description: "Specialized in technical SEO and content optimization to improve client website performance and search engine rankings.",
-    responsibilities: [
-      "Conducted comprehensive SEO audits for client websites",
-      "Developed keyword strategies based on market research",
-      "Implemented on-page and off-page optimization techniques",
-      "Created monthly analytics reports for clients",
-      "Collaborated with content team to develop SEO-friendly content"
-    ],
-    achievements: [
-      "Helped achieve first page rankings for 75% of target keywords",
-      "Implemented technical SEO improvements that increased site speeds by 40%",
-      "Developed an internal SEO training program for content writers"
-    ],
-    skills: ["Technical SEO", "Keyword Research", "Google Search Console", "Content Optimization", "Link Building"]
-  },
-  {
-    period: "June 2018 - February 2019",
-    role: "Marketing Intern",
-    company: "Pokhara Digital Agency, Pokhara",
-    description: "Supported the marketing team in implementing digital marketing campaigns for small businesses in the Pokhara region.",
-    responsibilities: [
-      "Managed social media accounts for multiple clients",
-      "Created content calendars and scheduled posts",
-      "Assisted in email marketing campaign setup and execution",
-      "Conducted basic SEO research and implementation",
-      "Helped organize digital marketing workshops for local businesses"
-    ],
-    achievements: [
-      "Grew social media engagement by 50% for a restaurant client",
-      "Contributed to a successful local business workshop with 75+ attendees",
-      "Improved email open rates by 25% through A/B testing subject lines"
-    ],
-    skills: ["Social Media Management", "Content Creation", "Email Marketing", "Basic SEO"]
   }
 ];
 
-// Mock testimonials data (replace with actual data)
+// Mock testimonials data (keep the same)
 const testimonials = [
   {
     text: "Sashant transformed our online presence with his strategic SEO approach. Our organic traffic increased dramatically, and we're now ranking for keywords we never thought possible. His deep understanding of digital marketing has been invaluable to our business.",

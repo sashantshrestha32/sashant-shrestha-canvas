@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Link to="/" className="font-heading text-2xl font-bold text-primary">
-              Sashant<span className="text-secondary">.Dev</span>
+              Sashant<span className="text-secondary"> Shrestha</span>
             </Link>
             <p className="mt-4 text-muted-foreground max-w-xs">
               Digital marketing specialist and SEO expert based in Pokhara, Nepal.

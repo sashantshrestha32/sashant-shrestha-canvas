@@ -220,10 +220,10 @@ const Contact = () => {
         </div>
       </section>
       
-      {/* Map Section */}
+      {/* Map Section - Updated with the new Google Maps URL */}
       <div className="h-80 bg-muted dark:bg-gray-900/50 w-full">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28065.566167708016!2d83.95696410000001!3d28.2305233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399595afbb4a6fa5%3A0x93fd966601493c4a!2sPokhara%2C%20Nepal!5e0!3m2!1sen!2snp!4v1680831754805!5m2!1sen!2snp"
+          src="https://www.google.pl/maps/place/6X6P%2BPJJ,+%E0%A4%AA%E0%A5%8B%E0%A4%96%E0%A4%B0%E0%A4%BE+33700/@28.2117638,83.9866506,20.01z/data=!4m6!3m5!1s0x399595b2f387fb51:0x8dbe257bd0694a1f!8m2!3d28.2118514!4d83.9865579!16s%2Fg%2F11jbhy179x?entry=ttu&g_ep=EgoyMDI1MDMzMS4wIKXMDSoASAFQAw%3D%3D"
           width="100%"
           height="100%"
           style={{ border: 0 }}

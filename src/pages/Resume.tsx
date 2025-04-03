@@ -133,84 +133,54 @@ const Resume = () => {
   );
 };
 
-// Mock education data (replace with actual data)
+// Updated education data
 const education = [
   {
-    degree: "Bachelor of Business Administration",
-    institution: "Prithvi Narayan Campus",
-    period: "2018 - 2022",
-    description: "Specialized in Marketing and Digital Business Strategies with focus on consumer behavior and market analysis."
+    degree: "Bachelor in Information Technology",
+    institution: "London Metropolitan University",
+    period: "2023 - Till now",
+    description: "Pursuing a degree in Information Technology, focusing on modern digital technologies and their applications."
   },
   {
-    degree: "Digital Marketing Certificate",
-    institution: "Google Digital Garage",
-    period: "2020",
-    description: "Comprehensive training in digital marketing fundamentals, SEO, analytics, and online advertising."
-  },
-  {
-    degree: "Higher Secondary Education",
+    degree: "Primary and Secondary Schooling",
     institution: "Gandaki Boarding School",
-    period: "2016 - 2018",
-    description: "Focused on Management and Commerce with additional courses in Computer Applications."
+    period: "2014 - 2023",
+    description: "Completed primary and secondary education with a focus on science and computer applications."
   }
 ];
 
-// Mock experience data (replace with actual data)
+// Updated experience data
 const experience = [
   {
-    position: "Digital Marketing Specialist",
-    company: "TechNepal Solutions",
-    period: "2021 - Present",
-    description: "Leading digital marketing strategies for various clients across industries. Implementing SEO, content marketing, and PPC campaigns that increased client visibility by an average of 45%.",
+    position: "SEO Expert & Digital Marketer",
+    company: "BG Tech",
+    period: "2024 - Present",
+    description: "Leading digital marketing strategies and SEO optimization for various clients across industries. Implementing comprehensive digital marketing campaigns to enhance online visibility.",
     skills: ["SEO", "Content Strategy", "Google Analytics", "PPC", "Social Media"]
-  },
-  {
-    position: "SEO Analyst",
-    company: "WebGrowth Nepal",
-    period: "2019 - 2021",
-    description: "Conducted comprehensive SEO audits and implemented optimization strategies that improved client rankings. Developed content strategies resulting in 60% increase in organic traffic.",
-    skills: ["Technical SEO", "Keyword Research", "Content Optimization", "Link Building"]
-  },
-  {
-    position: "Marketing Intern",
-    company: "Pokhara Digital Agency",
-    period: "2018 - 2019",
-    description: "Assisted in managing social media accounts for small businesses. Created content calendars and helped implement various digital marketing campaigns.",
-    skills: ["Social Media", "Content Creation", "Email Marketing"]
   }
 ];
 
-// Mock certification data (replace with actual data)
+// Updated certification data
 const certifications = [
   {
     name: "Google Analytics Certification",
     issuer: "Google",
-    date: "2022"
-  },
-  {
-    name: "Hubspot Inbound Marketing",
-    issuer: "HubSpot Academy",
-    date: "2021"
+    date: "2023"
   },
   {
     name: "SEO Fundamentals",
     issuer: "Semrush Academy",
-    date: "2020"
+    date: "2023"
   },
   {
     name: "Content Marketing",
     issuer: "Coursera",
-    date: "2020"
+    date: "2022"
   },
   {
     name: "Social Media Marketing",
     issuer: "Facebook Blueprint",
-    date: "2019"
-  },
-  {
-    name: "Email Marketing",
-    issuer: "Mailchimp Academy",
-    date: "2019"
+    date: "2022"
   }
 ];
 

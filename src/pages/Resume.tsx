@@ -16,13 +16,23 @@ const Resume = () => {
           />
 
           <div className="flex justify-center mb-8">
-            <Button size="lg" asChild>
-              <a href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:3a56b2cc-318d-4c20-a82b-af5c4d6d92f0" 
-                 target="_blank" 
-                 rel="noopener noreferrer">
-                Download Full Resume <Download className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
+            <div className="space-y-4 text-center">
+              <div className="w-full max-w-md mx-auto border rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/7c6317d3-7d67-4776-83a2-502f665c0738.png" 
+                  alt="Sashant Shrestha CV" 
+                  className="w-full h-auto object-cover" 
+                />
+              </div>
+              <Button size="lg" asChild>
+                <a href="/lovable-uploads/7c6317d3-7d67-4776-83a2-502f665c0738.png" 
+                  download="Sashant_Shrestha_CV.png" 
+                  target="_blank" 
+                  rel="noopener noreferrer">
+                  Download Full Resume <Download className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -153,7 +163,7 @@ const education = [
 const experience = [
   {
     position: "SEO Expert & Digital Marketer",
-    company: "BG Tech",
+    company: "BG Tech, Australia",
     period: "2024 - Present",
     description: "Leading digital marketing strategies and SEO optimization for various clients across industries. Implementing comprehensive digital marketing campaigns to enhance online visibility.",
     skills: ["SEO", "Content Strategy", "Google Analytics", "PPC", "Social Media"]
@@ -181,6 +191,16 @@ const certifications = [
     name: "Social Media Marketing",
     issuer: "Facebook Blueprint",
     date: "2022"
+  },
+  {
+    name: "Content Writing Certification",
+    issuer: "Google",
+    date: "2023"
+  },
+  {
+    name: "On-Page SEO Certification",
+    issuer: "Google",
+    date: "2023"
   }
 ];
 

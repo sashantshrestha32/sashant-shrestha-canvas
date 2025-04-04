@@ -107,7 +107,7 @@ const About = () => {
 };
 
 const personalDetails = [
-  "Based in Pokhara, Nepal",
+  "Based in Pokhara and Australia",
   "Digital Marketing Specialist",
   "SEO Expert",
   "Content Strategist",

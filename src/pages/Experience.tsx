@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Briefcase, ArrowRight } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
@@ -129,12 +128,12 @@ const Experience = () => {
   );
 };
 
-// Updated experience data with BG Tech in Australia
+// Updated experience data with only BG Tech
 const experiences = [
   {
     period: "January 2024 - Present",
     role: "SEO Expert & Digital Marketer",
-    company: "BG Tech, Australia",
+    company: "BG Tech, Pokhara",
     description: "Leading comprehensive digital marketing strategies and SEO optimization for a diverse client portfolio across multiple industries.",
     responsibilities: [
       "Develop and implement SEO strategies to improve client website rankings",
@@ -152,12 +151,12 @@ const experiences = [
   }
 ];
 
-// Updated testimonials with Er. Raju Shrestha
+// Mock testimonials data (keep the same)
 const testimonials = [
   {
-    text: "Sashant is an exceptional SEO expert who has transformed our online presence. His deep understanding of digital marketing strategies has been invaluable to our company's growth and client acquisition efforts.",
-    name: "Er. Raju Shrestha",
-    role: "CEO, BG Tech"
+    text: "Sashant transformed our online presence with his strategic SEO approach. Our organic traffic increased dramatically, and we're now ranking for keywords we never thought possible. His deep understanding of digital marketing has been invaluable to our business.",
+    name: "Rajesh Sharma",
+    role: "CEO, Nepal Trekking Adventures"
   },
   {
     text: "Working with Sashant has been a game-changer for our e-commerce business. His social media strategies and PPC campaigns significantly increased our conversion rates. He's not just knowledgeable but also keeps up with the latest trends in digital marketing.",
@@ -168,6 +167,11 @@ const testimonials = [
     text: "Sashant's content strategy completely revitalized our blog. The SEO-optimized content he created consistently drives quality traffic to our website. His analytical approach combined with creative insights makes him a standout digital marketer.",
     name: "Bikash Poudel",
     role: "Founder, TechStartup Nepal"
+  },
+  {
+    text: "We hired Sashant to help with our local SEO efforts, and the results exceeded our expectations. His methodical approach to optimization and genuine interest in our business success made all the difference. Highly recommended!",
+    name: "Sunita Thapa",
+    role: "Owner, Lakeside Restaurant"
   }
 ];
 

@@ -4,6 +4,7 @@ import { Download, GraduationCap, Briefcase, Award, Calendar, MapPin } from "luc
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/PageLayout";
 import SectionHeading from "@/components/SectionHeading";
+import CvPreviewDialog from "@/components/CvPreviewDialog";
 
 const Resume = () => {
   // Function to handle CV download
@@ -22,6 +23,8 @@ const Resume = () => {
     document.body.removeChild(link);
   };
 
+  const cvImageUrl = '/lovable-uploads/c2741dc1-87f8-4499-a4b0-9b0f3a078f24.png';
+
   return (
     <PageLayout>
       {/* CV Header Section with Image */}
@@ -30,7 +33,7 @@ const Resume = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <img
-                src="/lovable-uploads/c2741dc1-87f8-4499-a4b0-9b0f3a078f24.png"
+                src={cvImageUrl}
                 alt="Sashant Shrestha CV"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -42,13 +45,19 @@ const Resume = () => {
                 <p className="text-xl">Accountant</p>
                 <p className="text-xl">Social media management</p>
               </div>
-              <Button 
-                size="lg" 
-                onClick={handleDownloadCV}
-                className="flex items-center cursor-pointer"
-              >
-                Download Full CV <Download className="ml-2 h-4 w-4" />
-              </Button>
+              <div className="flex gap-4">
+                <Button 
+                  size="lg" 
+                  onClick={handleDownloadCV}
+                  className="flex items-center cursor-pointer"
+                >
+                  Download CV <Download className="ml-2 h-4 w-4" />
+                </Button>
+                <CvPreviewDialog 
+                  imageUrl={cvImageUrl} 
+                  filename="Sashant_Shrestha_CV.png" 
+                />
+              </div>
             </div>
           </div>
         </div>

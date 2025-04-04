@@ -6,6 +6,22 @@ import PageLayout from "@/components/PageLayout";
 import SectionHeading from "@/components/SectionHeading";
 
 const Resume = () => {
+  // Function to handle CV download
+  const handleDownloadCV = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    // Set the href to the image URL
+    link.href = '/lovable-uploads/c2741dc1-87f8-4499-a4b0-9b0f3a078f24.png';
+    // Set the download attribute with the filename
+    link.download = 'Sashant_Shrestha_CV.png';
+    // Append to the document
+    document.body.appendChild(link);
+    // Trigger the click event
+    link.click();
+    // Remove the link from the document
+    document.body.removeChild(link);
+  };
+
   return (
     <PageLayout>
       {/* CV Header Section with Image */}
@@ -26,14 +42,12 @@ const Resume = () => {
                 <p className="text-xl">Accountant</p>
                 <p className="text-xl">Social media management</p>
               </div>
-              <Button size="lg" asChild>
-                <a 
-                  href="/lovable-uploads/c2741dc1-87f8-4499-a4b0-9b0f3a078f24.png" 
-                  download="Sashant_Shrestha_CV.png"
-                  className="flex items-center cursor-pointer"
-                >
-                  Download Full CV <Download className="ml-2 h-4 w-4" />
-                </a>
+              <Button 
+                size="lg" 
+                onClick={handleDownloadCV}
+                className="flex items-center cursor-pointer"
+              >
+                Download Full CV <Download className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>

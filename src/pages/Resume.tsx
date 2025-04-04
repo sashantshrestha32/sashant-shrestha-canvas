@@ -30,7 +30,7 @@ const Resume = () => {
                 <a 
                   href="/lovable-uploads/c2741dc1-87f8-4499-a4b0-9b0f3a078f24.png" 
                   download="Sashant_Shrestha_CV.png"
-                  className="flex items-center"
+                  className="flex items-center cursor-pointer"
                 >
                   Download Full CV <Download className="ml-2 h-4 w-4" />
                 </a>

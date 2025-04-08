@@ -3,7 +3,6 @@ import { Download, GraduationCap, Briefcase, Award, Calendar, MapPin } from "luc
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/PageLayout";
 import SectionHeading from "@/components/SectionHeading";
-import CvPreviewDialog from "@/components/CvPreviewDialog";
 
 const Resume = () => {
   // Function to handle CV download

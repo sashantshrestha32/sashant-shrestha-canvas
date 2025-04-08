@@ -1,5 +1,6 @@
+
 import { motion } from "framer-motion";
-import { Briefcase, ArrowRight } from "lucide-react";
+import { Briefcase, ArrowRight, Code } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
@@ -84,8 +85,86 @@ const Experience = () => {
         </div>
       </section>
       
-      {/* Testimonials Section */}
+      {/* Skills Section */}
       <section className="section-padding bg-muted dark:bg-gray-900/50">
+        <div className="container mx-auto">
+          <SectionHeading 
+            title="Skills" 
+            subtitle="My technical and professional competencies"
+          />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Digital Marketing & SEO Skills */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-card dark:bg-gray-800 p-6 rounded-lg shadow-sm border"
+            >
+              <h3 className="text-xl font-bold mb-4 flex items-center">
+                <Briefcase className="h-5 w-5 mr-2 text-primary" />
+                Digital Marketing & SEO
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                {digitalMarketingSkills.map((skill, index) => (
+                  <div key={index} className="flex items-center">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                    <span>{skill}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            
+            {/* Web Development Skills */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-card dark:bg-gray-800 p-6 rounded-lg shadow-sm border"
+            >
+              <h3 className="text-xl font-bold mb-4 flex items-center">
+                <Code className="h-5 w-5 mr-2 text-primary" />
+                Web & Programming
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                {techSkills.map((skill, index) => (
+                  <div key={index} className="flex items-center">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                    <span>{skill}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            
+            {/* Accounting Skills */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-card dark:bg-gray-800 p-6 rounded-lg shadow-sm border md:col-span-2"
+            >
+              <h3 className="text-xl font-bold mb-4 flex items-center">
+                <Briefcase className="h-5 w-5 mr-2 text-primary" />
+                Accounting
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {accountingSkills.map((skill, index) => (
+                  <div key={index} className="flex items-center">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                    <span>{skill}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Testimonials Section */}
+      <section className="section-padding">
         <div className="container mx-auto">
           <SectionHeading 
             title="Testimonials" 
@@ -151,27 +230,67 @@ const experiences = [
   }
 ];
 
-// Mock testimonials data (keep the same)
+// Digital Marketing & SEO skills
+const digitalMarketingSkills = [
+  "SEO On-Page Optimization",
+  "SEO Off-Page Optimization",
+  "Technical SEO",
+  "Content Marketing",
+  "Email Marketing",
+  "Social Media Marketing",
+  "PPC Campaigns",
+  "Google Analytics",
+  "Keyword Research",
+  "Competitor Analysis",
+  "SEO Auditing",
+  "Link Building"
+];
+
+// Web and Programming skills
+const techSkills = [
+  "HTML",
+  "CSS",
+  "JavaScript Basics",
+  "Java Basics",
+  "WordPress",
+  "Responsive Design",
+  "Web Accessibility",
+  "SEO Tools"
+];
+
+// Accounting skills
+const accountingSkills = [
+  "Financial Reporting",
+  "Bookkeeping",
+  "Tax Preparation",
+  "Payroll Management",
+  "Budgeting",
+  "Expense Tracking",
+  "Invoicing",
+  "QuickBooks"
+];
+
+// Updated testimonials with the requested people
 const testimonials = [
   {
-    text: "Sashant transformed our online presence with his strategic SEO approach. Our organic traffic increased dramatically, and we're now ranking for keywords we never thought possible. His deep understanding of digital marketing has been invaluable to our business.",
-    name: "Rajesh Sharma",
-    role: "CEO, Nepal Trekking Adventures"
+    text: "Sashant's approach to SEO and digital marketing has significantly improved our online presence. His analytical skills combined with creative problem-solving have been a valuable asset to our team.",
+    name: "Er. Raju Shrestha",
+    role: "CEO, BG Tech"
   },
   {
-    text: "Working with Sashant has been a game-changer for our e-commerce business. His social media strategies and PPC campaigns significantly increased our conversion rates. He's not just knowledgeable but also keeps up with the latest trends in digital marketing.",
-    name: "Anita Gurung",
-    role: "Marketing Director, Himalayan Crafts"
+    text: "Working with Sashant on our digital marketing campaigns has been a game-changer for our production company. His attention to detail and strategic thinking has helped us reach new audiences effectively.",
+    name: "Kiran Shrestha",
+    role: "CEO, BG Production"
   },
   {
-    text: "Sashant's content strategy completely revitalized our blog. The SEO-optimized content he created consistently drives quality traffic to our website. His analytical approach combined with creative insights makes him a standout digital marketer.",
-    name: "Bikash Poudel",
-    role: "Founder, TechStartup Nepal"
+    text: "Sashant has shown exceptional skill in managing our social media platforms. His understanding of digital trends and audience behavior has helped us establish a strong online identity.",
+    name: "Sujan Shrestha",
+    role: "CEO, Third Eye Windsor"
   },
   {
-    text: "We hired Sashant to help with our local SEO efforts, and the results exceeded our expectations. His methodical approach to optimization and genuine interest in our business success made all the difference. Highly recommended!",
-    name: "Sunita Thapa",
-    role: "Owner, Lakeside Restaurant"
+    text: "Sashant's work on our restaurant's digital presence has brought us significant growth in online visibility. His SEO strategies have helped new customers discover our establishment.",
+    name: "Harry",
+    role: "Owner, Spice Guru Indian"
   }
 ];
 

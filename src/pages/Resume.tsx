@@ -10,7 +10,7 @@ const Resume = () => {
     // Create a link element
     const link = document.createElement('a');
     // Set the href to the image URL
-    link.href = '/lovable-uploads/c2741dc1-87f8-4499-a4b0-9b0f3a078f24.png';
+    link.href = '/lovable-uploads/0e7e62ed-c354-4735-80b4-5f51eb2ab770.png';
     // Set the download attribute with the filename
     link.download = 'Sashant_Shrestha_CV.png';
     // Append to the document
@@ -21,47 +21,20 @@ const Resume = () => {
     document.body.removeChild(link);
   };
 
-  const cvImageUrl = '/lovable-uploads/c2741dc1-87f8-4499-a4b0-9b0f3a078f24.png';
-
   return (
     <PageLayout>
-      {/* CV Header Section with Image */}
-      {/*
+      {/* Download CV Button Section */}
       <section className="section-padding bg-muted dark:bg-gray-900/50">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <img
-                src={cvImageUrl}
-                alt="Sashant Shrestha CV"
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
-            </div>
-            <div>
-              <h1 className="text-4xl font-bold mb-4">SASHANT SHRESTHA</h1>
-              <div className="space-y-2 mb-6">
-                <p className="text-xl">SEO Specialist</p>
-                <p className="text-xl">Accountant</p>
-                <p className="text-xl">Social media management</p>
-              </div>
-              <div className="flex gap-4">
-                <Button 
-                  size="lg" 
-                  onClick={handleDownloadCV}
-                  className="flex items-center cursor-pointer"
-                >
-                  Download CV <Download className="ml-2 h-4 w-4" />
-                </Button>
-                <CvPreviewDialog 
-                  imageUrl={cvImageUrl} 
-                  filename="Sashant_Shrestha_CV.png" 
-                />
-              </div>
-            </div>
-          </div>
+        <div className="container mx-auto flex justify-center">
+          <Button 
+            size="lg" 
+            onClick={handleDownloadCV}
+            className="flex items-center cursor-pointer"
+          >
+            Download CV <Download className="ml-2 h-4 w-4" />
+          </Button>
         </div>
       </section>
-      */}
 
       {/* Main Resume Content */}
       <section className="section-padding">

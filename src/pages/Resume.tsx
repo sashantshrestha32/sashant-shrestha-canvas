@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Download, GraduationCap, Briefcase, Award, Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -28,6 +27,7 @@ const Resume = () => {
   return (
     <PageLayout>
       {/* CV Header Section with Image */}
+      {/*
       <section className="section-padding bg-muted dark:bg-gray-900/50">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -62,6 +62,7 @@ const Resume = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Main Resume Content */}
       <section className="section-padding">
@@ -217,55 +218,35 @@ const Resume = () => {
         </div>
       </section>
 
-      {/* References Section */}
+      {/* Map Section - Enhanced Google Map of Pokhara */}
       <section className="section-padding bg-muted dark:bg-gray-900/50">
         <div className="container mx-auto">
           <SectionHeading 
-            title="References" 
-            subtitle="Professional references"
+            title="My Location" 
+            subtitle="Based in Pokhara, Nepal"
           />
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {references.map((reference, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card dark:bg-gray-800 p-6 rounded-lg shadow-sm border"
-              >
-                <h4 className="text-xl font-semibold mb-1">{reference.name}</h4>
-                <p className="text-lg text-primary mb-4">{reference.position}</p>
-                
-                <div className="space-y-2">
-                  <div className="flex items-center">
-                    <span className="text-sm font-medium w-16">Phone:</span>
-                    <span className="text-muted-foreground">{reference.phone}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="text-sm font-medium w-16">Email:</span>
-                    <span className="text-muted-foreground">{reference.email}</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+          
+          <div className="rounded-lg overflow-hidden shadow-lg border border-muted">
+            <div className="aspect-video">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56264.40159767707!2d83.9273775895508!3d28.209634900000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995937bbf0376ff%3A0xf6cf823b25802164!2sPokhara!5e0!3m2!1sen!2snp!4v1712091316320!5m2!1sen!2snp"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Pokhara, Nepal Map"
+              ></iframe>
+            </div>
+            <div className="p-4 bg-card">
+              <div className="flex items-center">
+                <MapPin className="h-5 w-5 text-primary mr-2" />
+                <p className="font-medium">Pokhara, Nepal</p>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="h-80">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d882.4513064642346!2d83.98655788860606!3d28.211767651347425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399595b2f387fb51%3A0x8dbe257bd0694a1f!2s6X6P%2BPJJ%2C%20%E0%A4%AA%E0%A5%8B%E0%A4%96%E0%A4%B0%E0%A4%BE%2033700!5e0!3m2!1sen!2snp!4v1712091316320!5m2!1sen!2snp"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Pokhara, Nepal Map"
-        ></iframe>
       </section>
     </PageLayout>
   );

@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import PageLayout from "@/components/PageLayout";
 import SectionHeading from "@/components/SectionHeading";
+import { Link } from "react-router-dom";
+import { blogPosts } from "@/data/blogData";
 
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -110,9 +112,11 @@ const Blog = () => {
                     <h3 className="text-xl font-bold mb-2 line-clamp-2">{post.title}</h3>
                     <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{post.excerpt}</p>
                     
-                    <Button variant="link" className="p-0 hover:text-primary">
-                      Read More <ArrowRight className="h-4 w-4 ml-1" />
-                    </Button>
+                    <Link to={`/blog/${post.id}`}>
+                      <Button variant="link" className="p-0 hover:text-primary">
+                        Read More <ArrowRight className="h-4 w-4 ml-1" />
+                      </Button>
+                    </Link>
                   </div>
                 </motion.div>
               ))
@@ -127,63 +131,5 @@ const Blog = () => {
     </PageLayout>
   );
 };
-
-// Mock blog posts data (replace with actual data)
-const blogPosts = [
-  {
-    id: 1,
-    title: "10 Proven SEO Strategies for Small Businesses in 2023",
-    excerpt: "Discover effective and budget-friendly SEO tactics that can help small businesses improve their online visibility and drive targeted traffic.",
-    date: "August 15, 2023",
-    author: "Sashant Shrestha",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    categories: ["SEO", "Small Business"]
-  },
-  {
-    id: 2,
-    title: "The Impact of AI on Digital Marketing: What You Need to Know",
-    excerpt: "Explore how artificial intelligence is transforming digital marketing strategies and how marketers can leverage AI tools to enhance their campaigns.",
-    date: "July 22, 2023",
-    author: "Sashant Shrestha",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    categories: ["Digital Marketing", "AI"]
-  },
-  {
-    id: 3,
-    title: "Content Marketing: Quality vs. Quantity Debate",
-    excerpt: "Analyzing the age-old debate of quality versus quantity in content marketing and how to find the right balance for your business.",
-    date: "June 10, 2023",
-    author: "Sashant Shrestha",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    categories: ["Content Marketing"]
-  },
-  {
-    id: 4,
-    title: "Mastering Local SEO: A Guide for Nepal Businesses",
-    excerpt: "Learn how to optimize your local business for search engines and attract more customers from your area with these specialized tactics.",
-    date: "May 5, 2023",
-    author: "Sashant Shrestha",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    categories: ["SEO", "Local Business"]
-  },
-  {
-    id: 5,
-    title: "Social Media Trends in 2023: What's Working Now",
-    excerpt: "Stay ahead of the curve with these emerging social media trends and strategies that are driving engagement and conversions.",
-    date: "April 18, 2023",
-    author: "Sashant Shrestha",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    categories: ["Social Media", "Digital Marketing"]
-  },
-  {
-    id: 6,
-    title: "Email Marketing Personalization: Beyond First Name Tags",
-    excerpt: "Discover advanced personalization techniques for your email marketing campaigns that can significantly improve open rates and conversions.",
-    date: "March 7, 2023",
-    author: "Sashant Shrestha",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    categories: ["Email Marketing"]
-  }
-];
 
 export default Blog;

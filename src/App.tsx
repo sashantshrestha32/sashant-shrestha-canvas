@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Experience from "./pages/Experience";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/resume" element={<Resume />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:id" element={<BlogPost />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

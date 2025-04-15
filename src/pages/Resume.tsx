@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Download, GraduationCap, Briefcase, Award, Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,15 +6,9 @@ import SectionHeading from "@/components/SectionHeading";
 import { toast } from "@/components/ui/use-toast";
 
 const Resume = () => {
-  // Updated function to handle CV download
   const handleDownloadCV = () => {
-    // Create a link element
     const link = document.createElement('a');
-    
-    // Set the href to the image URL (using absolute path)
-    const cvUrl = '/lovable-uploads/0e7e62ed-c354-4735-80b4-5f51eb2ab770.png';
-    
-    // Fetch the image first to ensure it exists
+    const cvUrl = '/lovable-uploads/84c0891b-a3a7-43fd-9aab-705fc1ae225e.png';
     fetch(cvUrl)
       .then(response => {
         if (!response.ok) {
@@ -24,22 +17,13 @@ const Resume = () => {
         return response.blob();
       })
       .then(blob => {
-        // Create object URL from the blob
         const objectUrl = URL.createObjectURL(blob);
-        
-        // Set link properties
         link.href = objectUrl;
         link.download = 'Sashant_Shrestha_CV.png';
-        
-        // Append to document, click, and clean up
         document.body.appendChild(link);
         link.click();
-        
-        // Clean up
         document.body.removeChild(link);
         URL.revokeObjectURL(objectUrl);
-        
-        // Show success toast
         toast({
           title: "Download started",
           description: "Your CV is being downloaded",
@@ -57,7 +41,6 @@ const Resume = () => {
 
   return (
     <PageLayout>
-      {/* Download CV Button Section */}
       <section className="section-padding bg-muted dark:bg-gray-900/50">
         <div className="container mx-auto flex justify-center">
           <Button 
@@ -70,7 +53,6 @@ const Resume = () => {
         </div>
       </section>
 
-      {/* Main Resume Content */}
       <section className="section-padding">
         <div className="container mx-auto">
           <SectionHeading 
@@ -79,7 +61,6 @@ const Resume = () => {
           />
 
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Education Section */}
             <div>
               <div className="flex items-center mb-8">
                 <GraduationCap className="h-6 w-6 text-primary" />
@@ -110,7 +91,6 @@ const Resume = () => {
               </div>
             </div>
 
-            {/* Experience Section */}
             <div>
               <div className="flex items-center mb-8">
                 <Briefcase className="h-6 w-6 text-primary" />
@@ -151,7 +131,6 @@ const Resume = () => {
         </div>
       </section>
 
-      {/* Social Media Management Section */}
       <section className="section-padding bg-muted dark:bg-gray-900/50">
         <div className="container mx-auto">
           <SectionHeading 
@@ -192,7 +171,6 @@ const Resume = () => {
         </div>
       </section>
 
-      {/* Certifications Section */}
       <section className="section-padding">
         <div className="container mx-auto">
           <SectionHeading 
@@ -224,7 +202,6 @@ const Resume = () => {
         </div>
       </section>
 
-      {/* Map Section - Enhanced Google Map of Pokhara */}
       <section className="section-padding bg-muted dark:bg-gray-900/50">
         <div className="container mx-auto">
           <SectionHeading 
@@ -258,7 +235,6 @@ const Resume = () => {
   );
 };
 
-// Updated education data
 const education = [
   {
     degree: "Bachelor in Information Technology",
@@ -274,7 +250,6 @@ const education = [
   }
 ];
 
-// Updated experience data
 const experience = [
   {
     position: "SEO Specialist",
@@ -285,7 +260,6 @@ const experience = [
   }
 ];
 
-// Social Media experience data
 const socialMediaExperience = [
   {
     company: "The Phoenix Vibes",
@@ -301,7 +275,6 @@ const socialMediaExperience = [
   }
 ];
 
-// Updated certification data
 const certifications = [
   {
     name: "Google Analytics Certification",
@@ -335,7 +308,6 @@ const certifications = [
   }
 ];
 
-// References data
 const references = [
   {
     name: "Er. Raju Shrestha",

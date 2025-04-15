@@ -1,24 +1,58 @@
+
 import { motion } from "framer-motion";
 import { Download, GraduationCap, Briefcase, Award, Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageLayout from "@/components/PageLayout";
 import SectionHeading from "@/components/SectionHeading";
+import { toast } from "@/components/ui/use-toast";
 
 const Resume = () => {
-  // Function to handle CV download
+  // Updated function to handle CV download
   const handleDownloadCV = () => {
     // Create a link element
     const link = document.createElement('a');
-    // Set the href to the image URL
-    link.href = '/lovable-uploads/0e7e62ed-c354-4735-80b4-5f51eb2ab770.png';
-    // Set the download attribute with the filename
-    link.download = 'Sashant_Shrestha_CV.png';
-    // Append to the document
-    document.body.appendChild(link);
-    // Trigger the click event
-    link.click();
-    // Remove the link from the document
-    document.body.removeChild(link);
+    
+    // Set the href to the image URL (using absolute path)
+    const cvUrl = '/lovable-uploads/0e7e62ed-c354-4735-80b4-5f51eb2ab770.png';
+    
+    // Fetch the image first to ensure it exists
+    fetch(cvUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('CV file not found');
+        }
+        return response.blob();
+      })
+      .then(blob => {
+        // Create object URL from the blob
+        const objectUrl = URL.createObjectURL(blob);
+        
+        // Set link properties
+        link.href = objectUrl;
+        link.download = 'Sashant_Shrestha_CV.png';
+        
+        // Append to document, click, and clean up
+        document.body.appendChild(link);
+        link.click();
+        
+        // Clean up
+        document.body.removeChild(link);
+        URL.revokeObjectURL(objectUrl);
+        
+        // Show success toast
+        toast({
+          title: "Download started",
+          description: "Your CV is being downloaded",
+        });
+      })
+      .catch(error => {
+        console.error('Download failed:', error);
+        toast({
+          title: "Download failed",
+          description: "Could not download the CV. Please try again.",
+          variant: "destructive",
+        });
+      });
   };
 
   return (
